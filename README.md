@@ -14,7 +14,7 @@ GetFreeCopy is a web application that allows users to search for academic articl
 GetFreeCopy aims to simplify the process of accessing academic articles and research papers by aggregating content from different sources into a single platform. Users can quickly search for specific articles and get information about them, including titles, authors, summaries, and publication dates. The application also provides direct links to the original sources, allowing users to access the full articles.
 
 ## Features
-- **Unified Search:** Search across multiple sources including arXiv, medRxiv, bioRxiv, PMC, and Google PDF search.
+- **Unified Search:** Search across multiple legitimate sources including arXiv, medRxiv, bioRxiv, and PMC.
 - **Detailed Information:** View article details such as title, author names, summaries, and publication dates.
 - **Direct Links:** Clicking on an article's title will redirect the user to the original source for reading or downloading.
 - **User-Friendly Interface:** The application offers an intuitive and easy-to-use interface, making it simple for users to find and access articles.
@@ -30,12 +30,10 @@ GetFreeCopy aims to simplify the process of accessing academic articles and rese
 GetFreeCopy is a web-based application and does not require any installation. Users can access it directly through their web browsers by visiting [https://www.getfreecopy.com]
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE). We welcome contributions to make this resource better and more useful to all researchers. 
 
 ---
-The main developer: Nodir Kosimkhujaev
-
-
+Main developer: Nodir Kosimkhujaev
 
 
 Website: [https://www.getfreecopy.com]
