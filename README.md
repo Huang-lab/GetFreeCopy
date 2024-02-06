@@ -1,4 +1,4 @@
-# Get-Free-Copy
+# GetFreeCopy
 
 
 GetFreeCopy is a web application that allows users to search for academic articles and research papers from various sources such as arXiv, medRxiv, bioRxiv, PMC, and Google PDF search. It provides a user-friendly interface to discover articles and access them for free.
