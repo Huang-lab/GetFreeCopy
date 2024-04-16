@@ -1,0 +1,149 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; /* Remove default margin */
+}
+
+header {
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 20px;
+  
+}
+
+#search-form {
+  display: flex;
+  flex-direction: column; /* Stack input and button vertically on small screens */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 100%; /* Full width on small screens */
+  box-sizing: border-box; /* Include padding and border in the width */
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px; /* Add some space between input and button */
+}
+
+button {
+  width: 100%; /* Full width on small screens */
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff; /* Use your preferred button color */
+}
+
+#search-results {
+  display: flex; /* Change display property to flex */
+  flex-wrap: nowrap; /* Allow items to wrap to the next line */
+  justify-content: space-around; /* Adjust alignment of items */
+  gap: 6px; /* Add gap between items */
+}
+
+.repository {
+  background-color: #f1f1f1;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding and border in the width */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.paper h4 {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 15px;
+}
+
+footer span {
+  color: #6d9df7;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.arxivTitleLink {
+  font-weight: bold;
+}
+
+/* Add media query for smaller screens */
+@media screen and (min-width: 768px) {
+  #search-form {
+    flex-direction: row; /* Display input and button side by side on larger screens */
+    justify-content: center;
+  }
+
+  #search-input {
+    width: 60%;
+    margin-bottom: 0; /* Remove bottom margin for larger screens */
+  }
+
+  button {
+    width: auto; /* Auto width on larger screens */
+  }
+
+
+  .repository {
+    width: 30%;
+  }
+  #tracking-info {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+  } 
+}
+
+/* Add media query for smaller screens */
+@media screen and (max-width: 767px) {
+  #search-results {
+    flex-direction: column;
+  }
+}
+
+head > link[rel="icon"] {
+  border-radius: 50%;
+
+}
+
+
+/* Loader styles */
+
+.loader-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 7vh;
+margin: auto;
+}
+
+/* .loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+} */
+
+.loader{
+  top: 0;
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite; /* Apply animation */
+  display: none; /* Hide loader by default */
+}
+
+/* Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

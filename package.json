@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "v18.15.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "arxiv-api": "^1.1.1",
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "cheerio": "^1.0.0-rc.12",
+    "config": "^3.3.9",
+    "cors": "^2.8.5",
+    "cors-anywhere-limited-destinations": "^0.0.2",
+    "dom-parser": "^0.1.6",
+    "express": "^4.18.2",
+    "google-scholar": "^1.5.1",
+    "google-search-results-nodejs": "^2.1.0",
+    "http-proxy-middleware": "^2.0.6",
+    "jquery": "^3.7.0",
+    "jsdom": "^22.0.0",
+    "node-fetch": "^2.6.11",
+    "sqlite3": "^5.1.6"
+  }
+}
