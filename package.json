@@ -20,6 +20,7 @@
     "body-parser": "^1.20.2",
     "cheerio": "^1.0.0-rc.12",
     "config": "^3.3.9",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "cors-anywhere-limited-destinations": "^0.0.2",
     "dom-parser": "^0.1.6",
@@ -29,6 +30,10 @@
     "http-proxy-middleware": "^2.0.6",
     "jquery": "^3.7.0",
     "jsdom": "^22.0.0",
-    "node-fetch": "^2.6.11"
+    "mongoose": "^8.4.0",
+    "node-cache": "^5.1.2",
+    "node-fetch": "^2.6.11",
+    "node-ncbi": "^0.7.3",
+    "sqlite3": "^5.1.6"
   }
 }
