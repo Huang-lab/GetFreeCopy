@@ -1,149 +1,155 @@
-/* styles.css */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0; /* Remove default margin */
-}
-
-header {
-  text-align: center;
-  background-color: #f1f1f1;
+  font-family: 'Poppins', sans-serif; /* Updated font */
+  background: linear-gradient(135deg, #4b2de0, #4818d5, #15ace0, #0bbf64);
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
   padding: 20px;
-  
+  color: #333;
 }
 
-#search-form {
-  display: flex;
-  flex-direction: column; /* Stack input and button vertically on small screens */
-  align-items: center;
+h1 {
+  text-align: center;
   margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 600; /* Bold font for the heading */
 }
 
-#search-input {
-  width: 100%; /* Full width on small screens */
-  box-sizing: border-box; /* Include padding and border in the width */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="date"] {
   padding: 10px;
-  font-size: 18px;
-  margin-bottom: 10px; /* Add some space between input and button */
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  transition: border-color 0.3s ease;
+  font-family: 'Poppins', sans-serif; /* Updated font */
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 button {
-  width: 100%; /* Full width on small screens */
-  padding: 10px;
-  font-size: 18px;
+  background-color: #007bff;
   color: white;
   border: none;
+  padding: 10px 18px;
+  font-size: 16px;
+  border-radius: 5px;
   cursor: pointer;
-  background-color: #007bff; /* Use your preferred button color */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Poppins', sans-serif; /* Updated font */
 }
 
-#search-results {
-  display: flex; /* Change display property to flex */
-  flex-wrap: nowrap; /* Allow items to wrap to the next line */
-  justify-content: space-around; /* Adjust alignment of items */
-  gap: 6px; /* Add gap between items */
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
-.repository {
-  background-color: #f1f1f1;
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.section {
+  background: linear-gradient(135deg, #ffffff, #f0f4ff); /* Gradient background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #f0f4ff, #e6f0ff); /* Slightly darker gradient on hover */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
   margin-bottom: 20px;
-  padding: 20px;
-  box-sizing: border-box; /* Include padding and border in the width */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.paper h4 {
-  margin-bottom: 5px;
-  font-size: 20px;
+li a {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif; /* Updated font */
 }
 
-.footer {
+li a:hover {
+  text-decoration: underline;
+}
+
+div strong {
+  color: #555;
+  font-family: 'Poppins', sans-serif; /* Updated font */
+}
+
+p {
+  margin: 10px 0 0;
+  line-height: 1.6;
+  color: #666;
+  font-family: 'Poppins', sans-serif; /* Updated font */
+}
+
+/* Loader */
+#loader {
+  display: none;
   text-align: center;
-  padding: 20px;
+  margin-bottom: 20px;
 }
 
-footer p {
-  text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  margin-top: 15px;
+.spinner {
+  border: 6px solid #ccc;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
 }
 
-footer span {
-  color: #6d9df7;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.arxivTitleLink {
-  font-weight: bold;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* Add media query for smaller screens */
-@media screen and (min-width: 768px) {
-  #search-form {
-    flex-direction: row; /* Display input and button side by side on larger screens */
-    justify-content: center;
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+    align-items: center;
   }
 
-  #search-input {
-    width: 60%;
-    margin-bottom: 0; /* Remove bottom margin for larger screens */
+  input[type="text"],
+  input[type="date"] {
+    width: 100%;
   }
 
   button {
-    width: auto; /* Auto width on larger screens */
+    width: 100%;
   }
-
-
-  .repository {
-    width: 30%;
-  }
-  #tracking-info {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: 15px;
-  } 
-}
-
-/* Add media query for smaller screens */
-@media screen and (max-width: 767px) {
-  #search-results {
-    flex-direction: column;
-  }
-}
-
-head > link[rel="icon"] {
-  border-radius: 50%;
-
-}
-
-
-/* Loader styles */
-
-.loader-wrapper {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 7vh;
-margin: auto;
-}
-
-/* .loader--hidden {
-  opacity: 0;
-  visibility: hidden;
-} */
-
-.loader{
-  top: 0;
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite; /* Apply animation */
-  display: none; /* Hide loader by default */
-}
-
-/* Animation */
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
